@@ -62,6 +62,14 @@ class SolisOptionsFlowHandler(OptionsFlow):
                 CONF_CONTROL, updated_config.get(CONF_CONTROL, False))
             updated_config[CONF_PORTAL_DOMAIN] = user_input.get(
                 CONF_PORTAL_DOMAIN, updated_config.get(CONF_PORTAL_DOMAIN, DEFAULT_DOMAIN))
+            updated_config[CONF_USERNAME] = user_input.get(
+                CONF_USERNAME, updated_config.get(CONF_USERNAME, ""))
+            updated_config[CONF_KEY_ID] = user_input.get(
+                CONF_KEY_ID, updated_config.get(CONF_KEY_ID, ""))
+            updated_config[CONF_SECRET] = user_input.get(
+                CONF_SECRET, updated_config.get(CONF_SECRET, ""))
+            updated_config[CONF_PLANT_ID] = user_input.get(
+                CONF_PLANT_ID, updated_config.get(CONF_PLANT_ID, ""))
             updated_config[CONF_REFRESH_OK] = user_input.get(
                 CONF_REFRESH_OK, updated_config.get(CONF_REFRESH_OK, 300))
             updated_config[CONF_REFRESH_NOK] = user_input.get(
@@ -77,6 +85,14 @@ class SolisOptionsFlowHandler(OptionsFlow):
         data_schema = {
             vol.Required(CONF_PORTAL_DOMAIN, default=self.config_entry.data.get(
                 CONF_PORTAL_DOMAIN, DEFAULT_DOMAIN)): cv.string,
+            vol.Required(CONF_USERNAME, default=self.config_entry.data.get(
+                CONF_USERNAME, "")): cv.string,
+            vol.Required(CONF_KEY_ID, default=self.config_entry.data.get(
+                CONF_KEY_ID, "")): cv.string,
+            vol.Required(CONF_SECRET, default=self.config_entry.data.get(
+                CONF_SECRET, "")): cv.string,
+            vol.Required(CONF_PLANT_ID, default=self.config_entry.data.get(
+                CONF_PLANT_ID, "")): cv.string,
             vol.Required(CONF_REFRESH_OK, default=self.config_entry.data.get(
                 CONF_REFRESH_OK, 300)): cv.positive_int,
             vol.Required(CONF_REFRESH_NOK, default=self.config_entry.data.get(
@@ -174,7 +190,7 @@ class SolisConfigFlow(ConfigFlow, domain=DOMAIN):
         data_schema = {
             vol.Required(CONF_USERNAME, default=None): cv.string,
             vol.Required(CONF_KEY_ID, default=""): cv.string,
-            vol.Required(CONF_SECRET, default="00"): cv.string,
+            vol.Required(CONF_SECRET, default=""): cv.string,
             vol.Required(CONF_PLANT_ID, default=None): cv.string,
             vol.Required(CONF_REFRESH_OK, default=300): cv.positive_int,
             vol.Required(CONF_REFRESH_NOK, default=60): cv.positive_int,

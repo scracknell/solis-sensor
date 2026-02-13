@@ -9,7 +9,7 @@
             "user": {
                 "data": {
                     "name": "Name of the inverter",
-                    "portal_domain": "PV Portal URL, e.g. https://v3.soliscloud.com:13333",
+                    "portal_domain": "PV Portal URL, e.g. https://www.soliscloud.com:13333",
                     "portal_version": "PV Portal version (SolisCloud? Read the README)"
                 },
                 "title": "Portal selection",
@@ -45,7 +45,10 @@
                 "data": {
                     "refresh_ok": "Refresh interval in seconds (default 300s)",
                     "refresh_nok": "Refresh interval in seconds for errors (default 60s)",
-                    "portal_domain":"PV Portal URL, e.g. https://www.soliscloud.com:13333"
+                    "portal_domain":"PV Portal URL, e.g. https://www.soliscloud.com:13333",
+                    "portal_username": "Portal username or email address",
+                    "portal_key_id": "API Key ID provided by SolisCloud",
+                    "portal_secret": "API Key secret provided by SolisCloud"
                 },
                 "sections": {
                     "Control": {
