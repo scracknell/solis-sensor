@@ -555,6 +555,14 @@ SENSOR_TYPES = {
         SensorStateClass.MEASUREMENT,
         BYPASS_LOAD_POWER,
     ],
+    "backuptodayenergy": [
+        "Daily Backup Energy",
+        UnitOfEnergy.KILO_WATT_HOUR,
+        "mdi:flash-outline",
+        SensorDeviceClass.ENERGY,
+        SensorStateClass.TOTAL_INCREASING,
+        BACKUPTODAYENERGY,
+    ],
     "meterItemACurrent": [
         "Meter item A current",
         UnitOfElectricCurrent.AMPERE,
