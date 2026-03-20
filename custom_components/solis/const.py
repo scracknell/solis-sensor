@@ -561,7 +561,7 @@ SENSOR_TYPES = {
         "mdi:flash-outline",
         SensorDeviceClass.ENERGY,
         SensorStateClass.TOTAL_INCREASING,
-        BACKUPTODAYENERGY,
+        BACKUP_TODAY_ENERGY,
     ],
     "meterItemACurrent": [
         "Meter item A current",
