@@ -248,7 +248,6 @@ INVERTER_DATA: InverterDataType = {
         GRID_DAILY_ENERGY_USED: ["homeLoadEnergy", float, 3],
         GRID_DAILY_ENERGY_USED_STR: ["homeLoadEnergyStr", str, None],
         BACKUP_TODAY_ENERGY: ["backupTodayEnergy", float, 3],
-        BACKUP_TODAY_ENERGY_STR: ["backupTodayEnergyStr", str, None],
         PLANT_TOTAL_CONSUMPTION_POWER: ["familyLoadPower", float, 3],
         PLANT_TOTAL_CONSUMPTION_POWER_STR: ["familyLoadPowerStr", str, None],
     },
