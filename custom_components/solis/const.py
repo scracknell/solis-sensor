@@ -558,7 +558,7 @@ SENSOR_TYPES = {
     "backuptodayenergy": [
         "Daily Backup Energy",
         UnitOfEnergy.KILO_WATT_HOUR,
-        "mdi:flash-outline",
+        "mdi:home-import-outline",
         SensorDeviceClass.ENERGY,
         SensorStateClass.TOTAL_INCREASING,
         BACKUP_TODAY_ENERGY,
